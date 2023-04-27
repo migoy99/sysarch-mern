@@ -10,7 +10,7 @@ function NavScroll() {
   return (
     <Navbar bg="transparent" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#">Purchase Online</Navbar.Brand>
+        <Navbar.Brand href="#">ReactJS</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
