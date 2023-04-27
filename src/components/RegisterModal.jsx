@@ -5,18 +5,26 @@ import Form from 'react-bootstrap/Form';
 
 const RegisterModal = () => {
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-
-  const [username, setUsername] = useState("");
+  
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
   const [password, setPassword] = useState("");
 
-  const register = (e) => {
-    localStorage.setItem("Username", username)
-    localStorage.setItem("Password", password)
-  }
+  
+  // const elements = [
+  //   {label: "Email", type: 'email'} ,
+  //   {label: "Username", type: 'text'},
+  //   {label: "Password", type: 'password'},
+  // ]
+
+
+  // const register = (e) => {
+  //   localStorage.setItem("email", email)
+  //   localStorage.setItem("Password", password)
+  // }
 
 
   return (
@@ -27,7 +35,7 @@ const RegisterModal = () => {
 
       <Modal
         show={show}
-        onHide={handleClose} S
+        onHide={handleClose} 
         backdrop="static"
         keyboard={false}
       >
@@ -37,12 +45,12 @@ const RegisterModal = () => {
         <Modal.Body>
           <Form>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Username</Form.Label>
+              <Form.Label>Email</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="Type in your username"
+                placeholder="Type in your email"
                 autoFocus
-                onChange={(e) => setUsername(e.target.value)}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
@@ -53,20 +61,20 @@ const RegisterModal = () => {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </Form.Group>
-            {/* <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
-              <Form.Label>Example textarea</Form.Label>
-              <Form.Control as="textarea" rows={3} />
-            </Form.Group> */}
+          <h3>Your Email is: {email}</h3>
+          <h3>Your Password is: {password}</h3>
           </Form>
+
+
+
+
+
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={() => { handleClose(); register() }}>
+          <Button variant="primary" onClick={() => { handleClose() }}>
             Register
           </Button>
         </Modal.Footer>
