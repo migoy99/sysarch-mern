@@ -8,24 +8,15 @@ const RegisterModal = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
 
-  
-  // const elements = [
-  //   {label: "Email", type: 'email'} ,
-  //   {label: "Username", type: 'text'},
-  //   {label: "Password", type: 'password'},
-  // ]
-
-
-  // const register = (e) => {
-  //   localStorage.setItem("email", email)
-  //   localStorage.setItem("Password", password)
-  // }
-
+  const elements = [
+    { label: "Username", type: 'text', placeholder: 'Type in your username' , set: function(e) {setName(e.target.value)}},
+    { label: "Email", type: 'email', placeholder: 'example@email.com' , set: function(e) {setEmail(e.target.value)}},
+    { label: "Password", type: 'password', placeholder: '' , set: function(e) {setPassword(e.target.value)}},
+  ]
 
   return (
     <>
@@ -35,41 +26,36 @@ const RegisterModal = () => {
 
       <Modal
         show={show}
-        onHide={handleClose} 
+        onHide={handleClose}
         backdrop="static"
-        keyboard={false}
-      >
+        keyboard={false}>
+
         <Modal.Header closeButton>
           <Modal.Title>Register</Modal.Title>
         </Modal.Header>
+
         <Modal.Body>
           <Form>
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Email</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="Type in your email"
-                autoFocus
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
-              <Form.Label>Password</Form.Label>
-              <Form.Control
-                type="password"
-                placeholder="Password"
-                onChange={(e) => setPassword(e.target.value)}
-              />
-            </Form.Group>
-          <h3>Your Email is: {email}</h3>
-          <h3>Your Password is: {password}</h3>
+            {elements.map((el) => {
+              return (
+                <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                  <Form.Label>{el.label}</Form.Label>
+                  <Form.Control
+                    autoFocus
+                    type={el.type}
+                    placeholder={el.placeholder}
+                    onChange={el.set}
+                  />
+                </Form.Group>
+              )
+            })}
+
+            <h4>Hello {name}</h4>
+            <h4>Your Email is: {email}</h4>
+            <h4>Your Password is: {password}</h4>
           </Form>
-
-
-
-
-
         </Modal.Body>
+
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
@@ -78,6 +64,7 @@ const RegisterModal = () => {
             Register
           </Button>
         </Modal.Footer>
+
       </Modal>
     </>
   );
@@ -85,3 +72,12 @@ const RegisterModal = () => {
 
 
 export default RegisterModal;
+
+
+
+
+  // const register = (e) => {
+  //   localStorage.setItem("email", email)
+  //   localStorage.setItem("Password", password)
+  // }
+

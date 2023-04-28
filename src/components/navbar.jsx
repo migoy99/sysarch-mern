@@ -5,6 +5,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import LoginModal from './LoginModal';
 import RegisterModal from './RegisterModal';
+import RegisterPage from './RegisterPage';
+import { Route, BrowserRouter } from 'react-router-dom';
 
 function NavScroll() {
   return (
@@ -40,13 +42,17 @@ function NavScroll() {
               placeholder="Search Something"
               className="me-2"
               aria-label="Search"
-              style={{ backgroundColor: 'transparent', border: 'none', color: '#fff', textColor: '#fff'}}
+              style={{ backgroundColor: 'transparent', border: 'none', color: '#fff', textColor: '#fff' }}
             />
 
 
             <LoginModal />
             <RegisterModal />
 
+            {/* <BrowserRouter>
+            <RegisterPage />
+              <Route registerPage="./RegisterPage.jsx" component={RegisterPage} />
+            </BrowserRouter> */}
 
           </Form>
         </Navbar.Collapse>
