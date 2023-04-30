@@ -30,9 +30,6 @@ function NavScroll() {
                 FAQs
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#" disabled>
-              Link
-            </Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control
@@ -48,7 +45,7 @@ function NavScroll() {
             <RegisterModal /> */}
 
 
-            <Link to="/register" ><Button variant="outline-dark">Register</Button></Link> &nbsp;&nbsp;
+            <Link to="/register" ><Button variant="outline-dark">Register</Button></Link>&nbsp;&nbsp;
             <Link to="/login" ><Button variant="outline-dark">Login</Button></Link>
 
 
