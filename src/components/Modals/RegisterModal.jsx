@@ -21,8 +21,8 @@ const RegisterModal = () => {
   return (
     <>
       <Button variant="outline-dark" onClick={handleShow}>
-        REGISTER
-      </Button>
+        Register
+      </Button>&nbsp;&nbsp; 
 
       <Modal
         show={show}
@@ -49,7 +49,7 @@ const RegisterModal = () => {
                 </Form.Group>
               )
             })}
-
+  
             <h4>Hello {name}</h4>
             <h4>Your Email is: {email}</h4>
             <h4>Your Password is: {password}</h4>

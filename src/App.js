@@ -1,15 +1,18 @@
-import NavBar from './components/navbar.jsx';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Route, Routes } from 'react-router-dom';
+import RegisterPage from './pages/RegisterPage.jsx';
+import Home from './pages/Home.jsx';
+import LoginPage from './pages/LoginPage.jsx';
 
 
 function App() {
   return (
-    <>
-      <NavBar />
-      <h3>Hello</h3>
-      <h3>User</h3>
-    </>
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/register' element={<RegisterPage/>}/>
+      <Route path='/login' element={<LoginPage/>}/>
+    </Routes>
   );
 }
 

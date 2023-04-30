@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import Form from 'react-bootstrap/Form'; 
+import Form from 'react-bootstrap/Form';
 
 function LoginModal() {
   const [show, setShow] = useState(false);
@@ -13,15 +13,15 @@ function LoginModal() {
   return (
     <>
       <Button variant="outline-dark" onClick={handleShow}>
-        LOGIN
+        Login
       </Button> &nbsp;&nbsp;
 
       <Modal
         show={show}
         onHide={handleClose}
         backdrop="static"
-        keyboard={false} 
-        className="modal-backdrop-transparent" 
+        keyboard={false}
+        className="modal-backdrop-transparent"
       >
         <Modal.Header closeButton>
           <Modal.Title modal-header>Login to Website</Modal.Title>

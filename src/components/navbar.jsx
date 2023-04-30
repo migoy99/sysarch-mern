@@ -1,12 +1,10 @@
+import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import LoginModal from './LoginModal';
-import RegisterModal from './RegisterModal';
-import RegisterPage from './RegisterPage';
-import { Route, BrowserRouter } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
 
 function NavScroll() {
   return (
@@ -46,13 +44,13 @@ function NavScroll() {
             />
 
 
-            <LoginModal />
-            <RegisterModal />
+            {/* <LoginModal />
+            <RegisterModal /> */}
 
-            {/* <BrowserRouter>
-            <RegisterPage />
-              <Route registerPage="./RegisterPage.jsx" component={RegisterPage} />
-            </BrowserRouter> */}
+
+            <Link to="/register" ><Button variant="outline-dark">Register</Button></Link> &nbsp;&nbsp;
+            <Link to="/login" ><Button variant="outline-dark">Login</Button></Link>
+
 
           </Form>
         </Navbar.Collapse>
