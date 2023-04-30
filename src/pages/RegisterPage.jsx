@@ -24,8 +24,8 @@ function RegisterPage() {
 
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '300px', marginLeft: '300px' }}>
                 <Form style={{ width: '40%' }}>
-                    <div style={{ justifyContent: 'center', alignItems: 'center' }}>
-                        <h3>Register</h3>
+                    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                        <h4>Register</h4>
                     </div>
                     {elements.map((el) => {
                         return (
@@ -36,6 +36,13 @@ function RegisterPage() {
                                     type={el.type}
                                     placeholder={el.placeholder}
                                     onChange={el.set}
+                                    style={{
+                                        padding: '.6em',
+                                        outline: 'none',
+                                        border: '2px solid rgb(200, 200, 200)',
+                                        backgroundColor: 'transparent',
+                                        borderRadius: '20px',
+                                    }}
                                 />
                             </Form.Group>
                         )
@@ -54,8 +61,8 @@ function RegisterPage() {
                         <h3>Hello {name}</h3>
                         <h3>Your Email is: {email}</h3>
                         <h3>Your Password is: {password}</h3>
-                        
-                        
+
+
                     </div>
 
                 </Form>
