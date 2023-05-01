@@ -24,9 +24,11 @@ function RegisterPage() {
 
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '300px', marginLeft: '300px' }}>
                 <Form style={{ width: '40%' }}>
+
                     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                         <h4>Register</h4>
                     </div>
+
                     {elements.map((el) => {
                         return (
                             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
@@ -52,6 +54,7 @@ function RegisterPage() {
                         <Button variant="outline-dark">Register</Button>
                     </div>
 
+
                     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '25px' }}>
                         <h6>Already have an account? <Link to='/login'>Login</Link></h6>
                     </div>
@@ -61,8 +64,6 @@ function RegisterPage() {
                         <h3>Hello {name}</h3>
                         <h3>Your Email is: {email}</h3>
                         <h3>Your Password is: {password}</h3>
-
-
                     </div>
 
                 </Form>
