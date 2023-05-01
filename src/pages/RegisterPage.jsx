@@ -25,7 +25,7 @@ function RegisterPage() {
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginRight: '300px', marginLeft: '300px' }}>
                 <Form style={{ width: '40%' }}>
                     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                        <h4>Registerssss</h4>
+                        <h4>Register</h4>
                     </div>
                     {elements.map((el) => {
                         return (
