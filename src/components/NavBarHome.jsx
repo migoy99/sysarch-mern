@@ -5,6 +5,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Button from 'react-bootstrap/Button';
+// import LoginModal from './Modals/LoginModal.jsx'
+// import RegisterModal from './Modals/LoginModal.jsx'
 
 function NavScroll() {
   return (
@@ -48,7 +50,7 @@ function NavScroll() {
             <Link to="/register" ><Button variant="outline-dark">Register</Button></Link>&nbsp;&nbsp;
             <Link to="/login" ><Button variant="outline-dark">Login</Button></Link>
 
-
+            
           </Form>
         </Navbar.Collapse>
       </Container>
