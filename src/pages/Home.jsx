@@ -1,11 +1,15 @@
 import React from 'react'
-import NavBar from '../components/NavBarHome.jsx';
+import NavBarLogged from '../components/NavBarLogged.jsx';
 
 const Home = () => {
+
+  const loggedUser = JSON.parse(localStorage.getItem("user"));
+
   return (
     <>
-      <NavBar />
+      <NavBarLogged />
       <h1>Home Page</h1>
+      <h2>hello {loggedUser.username}</h2>
     </>
   )
 }
