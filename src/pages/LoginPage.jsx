@@ -73,10 +73,10 @@ const LoginPage = () => {
                             <h6>Don't have an account? <Link to='/register'>Register</Link></h6>
                         </div>
 
-                        <div style={{ justifyContent: 'center', alignItems: 'center', margin: '5%' }}>
+                        {/* <div style={{ justifyContent: 'center', alignItems: 'center', margin: '5%' }}>
                             <h4>Your Email is: {userInput.email}</h4>
                             <h4>Your Password is: {userInput.password}</h4>
-                        </div>
+                        </div> */}
 
                     </Form>
                 </div>
