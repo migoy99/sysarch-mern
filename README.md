@@ -1,1 +1,3 @@
-#SYSARCH MACHINE PROBLEMS ON 1 REPO BUT DIFFERENT BRANCHES
+Home Page, Login Page, Register Page
+useState
+server.js working
